@@ -11,7 +11,7 @@ import os.log
 
 private let poi = OSSignposter(subsystem: "MyApp", category: .pointsOfInterest)
 
-typealias AsyncClosure = () async -> Void
+typealias AsyncClosure = @Sendable () async -> Void
 
 struct ExperimentView: View {
     @StateObject var viewModel = ExperimentViewModel()
